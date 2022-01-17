@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<title>Message Drop</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<script src="js/jquery.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="main_app">
+			<div id="logo_box">
+				<div id="logo_pic"></div>
+				<div id="logo_text">Message Drop</div>
+			</div>
+			<div id="conetent_box">
+				<div id="btn_page">
+					<button class="open_btn" target="send">发送</button>
+					<button class="open_btn" target="get">接收</button>
+				</div>
+				<div id="send_page" class="popup_page hide">
+					<div class="popup_close">×</div>
+					<div class="popup_head">
+						<p>发送页面</p>
+					</div>
+					<div class="popup_body">
+						<textarea id="send_textarea" placeholder="输入需发送的文本"></textarea>
+						<div id="send_result" class="hide">
+							<p class="send_state" state="ongoing">发送中...</p>
+							<p class="send_state hide" state="success">发送成功！口令：</p>
+							<p class="send_state hide" state="failure">发送失败！</p>
+							<p id="send_token" class="hide">000000</p>
+						</div>
+					</div>
+					<div class="popup_foot">
+						<button id="send_btn" class="popup_btn">发送</button>
+						<button class="copy_btn popup_btn hide" target="token">复制</button>
+					</div>
+				</div>
+				<div id="get_page" class="popup_page hide">
+					<div class="popup_close">×</div>
+					<div class="popup_head">
+						<p>接收页面</p>
+					</div>
+					<div class="popup_body">
+						<p class="get_state" state="wait">请输入接收口令</p>
+						<p class="get_state hide" state="ongoing">接收中...</p>
+						<p class="get_state hide" state="failure">接收失败！</p>
+						<div id="get_token">
+							<input type="text" id="get_input" placeholder="4-8位口令" />
+						</div>
+						<textarea id="get_textarea" readonly="readonly" class="hide"></textarea>
+					</div>
+					<div class="popup_foot">
+						<button id="get_btn" class="popup_btn">接收</button>
+						<button class="copy_btn popup_btn hide" target="content">复制</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

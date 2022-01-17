@@ -1,0 +1,213 @@
+:root {
+	--bg-color: #fafafa;
+	--text-color: #000000;
+	--text-danger-color: #ff0b37;
+	--close-btn-color:#b4b4b4;
+	--popup-bg-color: #ffffff;
+	--btn-bg-color1: #fafafa;
+	--btn-bg-color2: #ffffff;
+	--textarea-text-color: rgba(0, 0, 0, 0.8)
+}
+
+.hide {
+	display: none;
+}
+
+body {
+	background-color: var(--bg-color);
+}
+
+#main_app {
+	height: 100%;
+	max-width: 768px;
+	margin: auto;
+	position: relative;
+	padding: 30px;
+}
+
+#logo_box {
+	width: 80%;
+	max-width: 200px;
+	height: auto;
+	margin: 30px auto;
+}
+
+#logo_pic {
+	margin: 10px auto;
+	width: 150px;
+	height: 150px;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	border-radius: 50%;
+}
+
+#logo_text {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bolder;
+	text-align: center;
+	margin: 10px;
+	color: var(--text-color);
+}
+
+#conetent_box {
+	width: 80%;
+	max-width: 500px;
+	height: auto;
+	margin: 30px auto;
+}
+
+#btn_page {
+	padding: 30px;
+}
+
+button {
+	display: block;
+	width: 80%;
+	max-width: 200px;
+	height: 40px;
+	margin: 20px auto;
+	padding: 0 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	background-color: var(--btn-bg-color1);
+	line-height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: var(--btn-bg-color2);
+}
+
+.popup_page {
+	box-sizing: border-box;
+	background-color: var(--popup-bg-color);
+	border-radius: 10px;
+	padding: 10px 30px 30px;
+	width: 100%;
+	height: 380px;
+}
+
+.popup_close {
+	height: 30px;
+	width: 30px;
+	margin: 0 -20px 0 calc(100% - 10px);
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	font-size: 30px;
+	color:var(--close-btn-color);
+	cursor: pointer;
+}
+
+.popup_head {
+	height: 30px;
+	text-align: center;
+	color: var(--text-color);
+	font-size: 18px;
+	line-height: 30px;
+	margin: 0 0 10px 0;
+}
+.popup_head p{
+	margin: 0;
+}
+.popup_body {
+	height: calc(100% - 140px);
+}
+
+.popup_foot {
+	padding: 30px 0 0 0;
+	height: 40px;
+}
+
+.popup_btn {
+	background-color: var(--btn-bg-color2);
+	height: max-content;
+	margin: 0 auto;
+}
+
+.popup_btn:hover {
+	background-color: var(--btn-bg-color1);
+}
+
+#send_textarea {
+	resize: none;
+	width: calc(100% - 30px);
+	height: calc(100% - 20px);
+	border-radius: 3px;
+	padding: 10px 15px;
+	border: 2px var(--text-color) solid;
+	color: var(--textarea-text-color);
+	font-size: small;
+}
+
+#send_result {
+	width: calc(100% - 30px);
+	height: calc(100% - 20px);
+	padding: 10px 15px;
+	border: 2px var(--text-color) solid;
+	color: var(--textarea-text-color);
+}
+
+#send_result p {
+	text-align: center;
+}
+
+#send_token {
+	font-size: 40px;
+	letter-spacing: 5px;
+	margin: 20px 0;
+}
+
+.send_state[state="ongoing"] {
+	line-height: 90px;
+}
+
+.send_state[state="failure"] {
+	line-height: 90px;
+	color: var(--text-danger-color)
+}
+
+#get_token {
+	width: 60%;
+	height: 40px;
+	margin: 0 auto;
+}
+
+#get_input {
+	width: 100%;
+	height: 100%;
+	border: 2px var(--text-color) solid;
+	line-height: 40px;
+	font-size: 25px;
+	text-align: center;
+}
+
+#get_textarea {
+	resize: none;
+	width: calc(100% - 30px);
+	height: calc(100% - 20px);
+	border-radius: 3px;
+	padding: 10px 15px;
+	border: 2px var(--text-color) solid;
+	color: var(--textarea-text-color);
+	font-size: small;
+}
+
+.get_state[state="wait"] {
+	text-align: center;
+	padding: 20px 0 10px;
+}
+
+.get_state[state="ongoing"] {
+	line-height: 90px;
+	text-align: center;
+}
+
+.get_state[state="failure"] {
+	text-align: center;
+	line-height: 90px;
+	color: var(--text-danger-color)
+}
