@@ -2,7 +2,7 @@
 	--bg-color: #fafafa;
 	--text-color: #000000;
 	--text-danger-color: #ff0b37;
-	--close-btn-color:#b4b4b4;
+	--close-btn-color: #b4b4b4;
 	--popup-bg-color: #ffffff;
 	--btn-bg-color1: #fafafa;
 	--btn-bg-color2: #ffffff;
@@ -98,8 +98,12 @@ button:hover {
 	text-align: center;
 	line-height: 30px;
 	font-size: 30px;
-	color:var(--close-btn-color);
+	color: var(--close-btn-color);
 	cursor: pointer;
+}
+
+.popup_close:hover {
+	color: var(--text-color);
 }
 
 .popup_head {
@@ -110,9 +114,11 @@ button:hover {
 	line-height: 30px;
 	margin: 0 0 10px 0;
 }
-.popup_head p{
+
+.popup_head p {
 	margin: 0;
 }
+
 .popup_body {
 	height: calc(100% - 140px);
 }
