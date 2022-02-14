@@ -21,12 +21,13 @@
 					<button class="open_btn" target="get">接收</button>
 				</div>
 				<div id="send_page" class="popup_page hide">
-					<div class="popup_close">×</div>
+					<div class="popup_close"></div>
 					<div class="popup_head">
 						<p>发送页面</p>
 					</div>
 					<div class="popup_body">
-						<textarea id="send_textarea" placeholder="输入需发送的文本"></textarea>
+						<textarea id="send_textarea" placeholder="输入需发送的文本(500字符以内)"></textarea>
+						<div id="send_notice"><span>0</span>/500</div>
 						<div id="send_result" class="hide">
 							<p class="send_state" state="ongoing">发送中...</p>
 							<p class="send_state hide" state="success">发送成功！口令：</p>
@@ -41,7 +42,7 @@
 					</div>
 				</div>
 				<div id="get_page" class="popup_page hide">
-					<div class="popup_close">×</div>
+					<div class="popup_close"></div>
 					<div class="popup_head">
 						<p>接收页面</p>
 					</div>
@@ -50,7 +51,7 @@
 						<p class="get_state hide" state="ongoing">接收中...</p>
 						<p class="get_state hide" state="failure">接收失败！</p>
 						<div id="get_token">
-							<input type="text" id="get_input" placeholder="4-8位口令" />
+							<input type="text" id="get_input" placeholder="4-8位口令" maxlength="8" autocomplete="off"/>
 						</div>
 						<textarea id="get_textarea" readonly="readonly" class="hide"></textarea>
 					</div>

@@ -3,6 +3,7 @@
 	--text-color: #000000;
 	--text-danger-color: #ff0b37;
 	--close-btn-color: #b4b4b4;
+	--popup-border-color: #000000;
 	--popup-bg-color: #ffffff;
 	--btn-bg-color1: #fafafa;
 	--btn-bg-color2: #ffffff;
@@ -22,14 +23,14 @@ body {
 	max-width: 768px;
 	margin: auto;
 	position: relative;
-	padding: 30px;
+	padding: 30px 10px;
 }
 
 #logo_box {
 	width: 80%;
-	max-width: 200px;
+	min-width: 200px;
 	height: auto;
-	margin: 30px auto;
+	margin: 100px auto 30px;
 }
 
 #logo_pic {
@@ -40,8 +41,29 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	border-radius: 50%;
+	cursor: pointer;
+}
+#logo_pic:hover{
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+    -webkit-transition:-webkit-transform 1s linear;
+    transition:transform 1s linear;
 }
 
+.small_logo_box{
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 50px auto;
+	max-width: 250px;
+}
+.small_logo_box #logo_pic{
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+}
+.small_logo_box #logo_text{
+	
+}
 #logo_text {
 	font-size: 24px;
 	line-height: 30px;
@@ -52,7 +74,7 @@ body {
 }
 
 #conetent_box {
-	width: 80%;
+	width: 90%;
 	max-width: 500px;
 	height: auto;
 	margin: 30px auto;
@@ -64,7 +86,7 @@ body {
 
 button {
 	display: block;
-	width: 80%;
+	width: 90%;
 	max-width: 200px;
 	height: 40px;
 	margin: 20px auto;
@@ -85,25 +107,32 @@ button:hover {
 	box-sizing: border-box;
 	background-color: var(--popup-bg-color);
 	border-radius: 10px;
-	padding: 10px 30px 30px;
+	padding: 10px 20px 30px;
 	width: 100%;
 	height: 380px;
+	border: 2px var(--popup-border-color) solid;
 }
 
 .popup_close {
 	height: 30px;
 	width: 30px;
-	margin: 0 -20px 0 calc(100% - 10px);
+	background-image: url(../img/close.svg);
+	margin: 0 -10px 0 calc(100% - 20px);
 	border-radius: 50%;
 	text-align: center;
 	line-height: 30px;
 	font-size: 30px;
 	color: var(--close-btn-color);
 	cursor: pointer;
+	opacity: .7;
 }
 
-.popup_close:hover {
-	color: var(--text-color);
+.popup_close:hover{
+	opacity: 1;
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+    -webkit-transition:-webkit-transform 1s linear;
+    transition:transform 1s linear;
 }
 
 .popup_head {
@@ -148,7 +177,9 @@ button:hover {
 	color: var(--textarea-text-color);
 	font-size: small;
 }
-
+#send_notice{
+	text-align: end;
+}
 #send_result {
 	width: calc(100% - 30px);
 	height: calc(100% - 20px);
